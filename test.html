@@ -140,9 +140,7 @@
                                         <ul type="disc">
                                             <li>brew 安装 不是 最新 版</li>
                                             <li>因 与 mariadb 及 percona-server 同时 安装 会有 冲突
-                                                <pre><code> Conflicts with:
-mariadb (because mysql, mariadb, and percona install the same binaries)
-percona-server (because mysql, mariadb, and percona install the same binaries)</code></pre>
+                                                <pre><code> Conflicts with:</code></pre>
                                             </li>
                                             <li>
                                                 <details open>
@@ -250,8 +248,7 @@ percona-server (because mysql, mariadb, and percona install the same binaries)</
                                                              <pre><code>/usr/local/mysql --> /usr/local/mysql-8.0.29-macos12-arm64 -- `更改 syncblic link 的位置，即可更改 mysql 源（版本）`</code></pre>
                                                         </li>
                                                         <li>可以用下面的命令 更改 Syncbolic link 的 原始目录位置（路径）： -- ln 命令的 帮助：man ln 也可以：ln --help 或者 ln -help | more
-                                                             <pre><code>cd /usr/local
-ln -s mysql-8.0.30-macos12-arm64 mysql</code></pre>
+                                                             <pre><code>cd /usr/local</code></pre>
                                                              <pre><code>ln -s /usr/local/mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
                                                         </li>
                                                     </ul>
@@ -360,20 +357,7 @@ ln -s mysql-8.0.30-macos12-arm64 mysql</code></pre>
                                 <li>下载的包存放位置 - `/Users/Softwares/Oracle/Database/MySQL/` 目录下，解压也是放在当前目录下</li>
                                 <li>也可以用 Wget 的 方法 或者 Curl 的 方法</li>
                                 <li>To install and use a MySQL binary distribution, the command sequence looks like this:<br>
-                                    <pre><code>$> groupadd mysql
-$> useradd -r -g mysql -s /bin/false mysql
-$> cd /usr/local
-$> tar xvf /path/to/mysql-VERSION-OS.tar.xz
-$> ln -s full-path-to-mysql-VERSION-OS mysql
-$> cd mysql
-$> mkdir mysql-files
-$> chown mysql:mysql mysql-files
-$> chmod 750 mysql-files
-$> bin/mysqld --initialize --user=mysql
-$> bin/mysql_ssl_rsa_setup
-$> bin/mysqld_safe --user=mysql &
-# Next command is optional
-$> cp support-files/mysql.server /etc/init.d/mysql.server</code></pre>
+                                    <pre><code>$> groupadd mysql</code></pre>
                                 </li>
                                 <li>
                                     <details open>
@@ -382,8 +366,7 @@ $> cp support-files/mysql.server /etc/init.d/mysql.server</code></pre>
                                         </summary>
                                         <ol type="1">
                                             <li>Create a mysql User and Group
-                                                <pre><code>$> groupadd mysql
-$> useradd -r -g mysql -s /bin/false mysql</code></pre>
+                                                <pre><code>$> groupadd mysql</code></pre>
                                             </li>
                                             <li>下载安装包，作为开发、学习用，下载 社区版 即可，the community version is available <a href="https://dev.mysql.com/downloads/mysql/">here</a></li>
                                             <li>下载方式
@@ -393,15 +376,13 @@ $> useradd -r -g mysql -s /bin/false mysql</code></pre>
                                                         选择 Compressed TAR Archive(mysql-8.3.0-macos14-arm64.tar.gz) or TAR(mysql-8.3.0-macos14-arm64.tar),然后， 点击下载
                                                     </li>
                                                     <li>用 Wget 的方法
-                                                        <pre><code>cd /Users/Softwares/Oracle/Database/MySQL/
-wget https://dev.mysql.com/get/Downloads/MySQL-8.3/mysql-8.3.0-macos14-arm64.tar.gz</code></pre>
+                                                        <pre><code>cd /Users/Softwares/Oracle/Database/MySQL/</code></pre>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>下载的包存放位置 - `/Users/Softwares/Oracle/Database/MySQL/` 目录下，解压也是放在当前目录下</li>
                                             <li>解压缩
-                                                <pre><code>$> cd /Users/Softwares/Oracle/Database/MySQL/
-$> tar xvf /path/to/mysql-VERSION-OS.tar.xz</code></pre>
+                                                <pre><code>$> cd /Users/Softwares/Oracle/Database/MySQL/</code></pre>
                                             </li>
                                             <li>建立 到 user/local/mysql 的 链接
                                                 <pre><code>ln -s full-path-to-mysql-VERSION-OS /usr/local/mysql</code></pre>
@@ -418,11 +399,7 @@ $> tar xvf /path/to/mysql-VERSION-OS.tar.xz</code></pre>
                                                           </summary>
                                                           <ul type="disc">
                                                               <li><i><b>✨ To avoid having to type the path name of client programs always when you are working with MySQL, you can add the /usr/local/mysql/bin directory to your PATH variable:（编辑 .zshrc 文件（zsh ），bash 待补充）</b></i>
-                                                                  <pre><code>$> export MYSQL_HOME=/usr/local/mysql
-$> export PATH=$PATH:$MYSQL_HOME/bin
-#
-# or
-$> export PATH=$PATH:/usr/local/mysql/bin</code></pre>
+                                                                  <pre><code>$> export MYSQL_HOME=/usr/local/mysql</code></pre>
                                                               </li>
                                                           </ul>
                                                       </details>
@@ -462,8 +439,7 @@ $> export PATH=$PATH:/usr/local/mysql/bin</code></pre>
                                                              <pre><code>/usr/local/mysql --> /Users/Softwares/Oracle/Database/MySQL/mysql-8.0.29-macos12-arm64 -- `更改 syncblic link 的位置，即可更改 mysql 源（版本）`</code></pre>
                                                         </li>
                                                         <li>可以用下面的命令 更改 Syncbolic link 的 原始目录位置： -- ln 命令的 帮助：man ln 也可以：ln --help 或者 ln -help | more
-                                                             <pre><code>cd /Users/Softwares/Oracle/Database/MySQL/
-ln -s mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
+                                                             <pre><code>cd /Users/Softwares/Oracle/Database/MySQL/</code></pre>
                                                              <pre><code>ln -s /Users/Softwares/Oracle/Database/MySQL/mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
                                                         </li>
                                                     </ul>
@@ -610,10 +586,7 @@ ln -s mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
                                             <li>使用命令行（shell command）工具:mysqladmin 或 mysqld。➡️🔀➡️▶️ Note：详细说明，参见：<a href="">6.5.2 mysqladmin — A MySQL Server Administration Program</a>
                                                 <ol type="i">
                                                     <li>方法 1: 使用 mysqladmin:
-                                                        <pre><code>～ ❯ cd /usr/local/mysql
-/usr/local/mysql ❯ bin/mysqladmin -u root -p variables | grep my.cnf;  # 如果 未设置，则 返回 为 空
-# 使用 列 方式
-/usr/local/mysql ❯ bin/mysqladmin -u root -p variables | grep my.cnf | awk '{print $2,$4}';  # 如果 未设置，则 返回 为 空</code></pre>
+                                                        <pre><code>～ ❯ cd /usr/local/mysql</code></pre>
                                                         <img alt="image" src="../../assets/8960325/d953b454-2934-42e8-832d-07893f44e563" width="60%" height="60%" style="float:left; margin: 5px;" /><br>
                                                     </li>
                                                     <li>方法 2:
@@ -793,10 +766,7 @@ ln -s mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
                                                 </ul>
                                                 <ol type="i">
                                                     <li>方法 1: 使用 mysqladmin:
-                                                        <pre><code>～ ❯ cd /usr/local/mysql
-/usr/local/mysql ❯ bin/mysqladmin -u root -p variables | grep datadir;
-# 使用 列 方式
-/usr/local/mysql ❯ bin/mysqladmin -u root -p variables|grep datadir | awk '{print $2,$4}'</code></pre>
+                                                        <pre><code>～ ❯ cd /usr/local/mysql</code></pre>
                                                         <img alt="image" src="../../assets/8960325/2a4bef14-7c84-41b0-9b8e-6929f41a2f51" width="60%" height="60%" style="float:left; margin: 5px;" /><br>
                                                     </li>
                                                     <li>方法 2:
@@ -925,15 +895,11 @@ ln -s mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
                                                                             <ul type="disc">
                                                                                 <li>用 与 Linux 系统 相同 的 命令，因 MacOS 本质 是 Linux 系统 的 子集</li>
                                                                                 <li>默认安装 情况 下， 查询 数据目录 的 详细信息 命令（包括，用户和组，以及 用户和组 的 权限）：
-                                                                                    <pre><code>❯ cd /user/local/mysql
-# 也可以 直接 查 源 目录
-❯ cd /user/local/mysql-8.3.0-macos14-arm64
-❯ ls -l -F | grep data</code></pre>
+                                                                                    <pre><code>❯ cd /user/local/mysql</code></pre>
                                                                                     <img width="1309" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/0983db9e-1e52-4fec-9832-b505ef78f0de">
                                                                                 </li>
                                                                                 <li>如果 更改 了 数据目录，则 先 进入 该目录 的 父目录，然后，运行 查询 命令：
-                                                                                    <pre><code>❯ cd /Users/Data/mysql
-❯ ls -l -F | grep data</code></pre>
+                                                                                    <pre><code>❯ cd /Users/Data/mysql</code></pre>
                                                                                     <img width="1310" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/34b43156-a2f9-4636-9c14-80451462e79a">
                                                                                 </li>
                                                                                 </li>附：查 系统 所有 的 用户和组 的 命令：<br>
@@ -1092,8 +1058,7 @@ ln -s mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
                                                             Create a directory whose location can be specified as the value of that variable: - The secure_file_priv system variable limits import and export operations to a specific directory.
                                                             <pre><code>mkdir mysql-files</code></pre>
                                                             Grant directory user and group ownership to the mysql user and mysql group, and set the directory permissions appropriately:
-                                                            <pre><code>chown mysql:mysql mysql-files
-chmod 750 mysql-files</code></pre>
+                                                            <pre><code>chown mysql:mysql mysql-files</code></pre>
                                                         </li>
                                                         <li>
                                                             Use the server to initialize the data directory, including the mysql schema containing the initial MySQL grant tables that determine how users are permitted to connect to the server. For example:
@@ -1135,16 +1100,13 @@ chmod 750 mysql-files</code></pre>
                                                     </summary>
                                                     <ol type="1">
                                                         <li>确认 /usr/local/mysql 链接 的 目录 是否 是 MySQL 的 最新版本
-                                                            <pre><code>❯ cd /usr/local
-❯ ls -l</code></pre>
+                                                            <pre><code>❯ cd /usr/local</code></pre>
                                                             <img alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/ea3f7c4c-54bf-4409-a55e-f106e0d63a85" width="60%" height="60%" style="float:left; margin: 5px;" /><br>
                                                             如果，没有链接到 最新 的 版本，执行以下 命令，建立 到 最新 版本 的 链接
                                                             <pre><code>❯ ln -s /usr/local/mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
                                                         </li>
                                                         <li>在 my.cnf 文档中（编辑 my.cnf），添加 或 修改 下列内容<br>Note: my.cnf 所在目录 优先采用：$MYSQL_HOME/my.cnf
-                                                            <pre><code>[mysqld]
-basedir=/usr/local/mysql
-datadir=/Users/Data/mysql/data</code></pre>
+                                                            <pre><code>[mysqld]</code></pre>
                                                         </li>
                                                         <li>执行初始化 命令： - Use the server to initialize the data directory, including the mysql schema containing the initial MySQL grant tables that determine how users are permitted to connect to the server.
                                                             <ul type="disc">
@@ -1153,14 +1115,11 @@ datadir=/Users/Data/mysql/data</code></pre>
                                                                     Create a directory if not exists ❎ - 备注：此步骤弃用 - 不能执行下面的命令
                                                                     <pre><code>mkdir -p /Users/Data/mysql/data</code></pre>
                                                                     Grant directory user and group ownership to the mysql user and mysql group, and set the directory permissions appropriately ❎  备注：同上，此步骤弃用
-                                                                    <pre><code>cd /Users/Data/mysql
-sudo chown _mysql:_mysql data
-sudo chmod 750 data</code></pre>
+                                                                    <pre><code>cd /Users/Data/mysql</code></pre>
                                                                 </li>
                                                                 <li>Note: 使用 --initialize，需要重置 root 密码</li>
                                                             </ul>
-                                                            <pre><code>❯ cd /usr/local/mysql
-❯ bin/mysqld --defaults-file=/usr/local/mysql/my.cnf --initialize --user=mysql</code></pre>
+                                                            <pre><code>❯ cd /usr/local/mysql</code></pre>
                                                             <ul type="list-style-type:circle">
                                                                 <li>Note: 执行完 初始化 命令 后，一定 要 找到 下面 这行，并记住 密码，以便能够登陆系统，再设置新（重置）密码；<br>
                                                                   否则，就要 <a href="">重新初始化密码</a>（👿麻烦）。！！！
@@ -1171,15 +1130,13 @@ sudo chmod 750 data</code></pre>
                                                         <li>设置 新密码 - After connecting, use an ALTER USER statement to assign a new root password:
                                                             <ul type="list-style-type:circle">
                                                                 <li>启动 服务器
-                                                                    <pre><code>❯ cd /usr/local/mysql
-❯ bin/mysqld_safe --user=mysql &</code></pre>
+                                                                    <pre><code>❯ cd /usr/local/mysql</code></pre>
                                                                     或用下面的命令，启动：
                                                                     <pre><code>❯ /usr/local/mysql/support-files/mysql.server start # 根据 数据目录 的 权限，确定 要不要 在 命令 前 加 <i>sudo</i></code></pre>
                                                                     Note: 如果权限设置 或 方式 不对，就 无法使用 上述 命令 启动 服务器，具体 参见：<a href="">启动 和 关闭 数据库</a> 和 <a href="#relate-to-mysql-data-directory-usr-and-group">✨ 数据目录 的 系统 用户权限 相关</a>
                                                                 </li>
                                                                 <li>连接 到 服务器
-                                                                    <pre><code>❯ cd /usr/local/mysql
-❯ bin/mysql -u root -p</code></pre>
+                                                                    <pre><code>❯ cd /usr/local/mysql</code></pre>
                                                                 <li>执行 重置密码 语句
                                                                     <pre><code>ALTER USER 'root'@'localhost' IDENTIFIED BY 'root-password';</code></pre>
                                                                     选用的密码：r**t123T**r
@@ -1236,9 +1193,7 @@ sudo chmod 750 data</code></pre>
                                 <li>针对 Binary or Package-based 安装 的 MySQL，有 三种 的 升级 方式：
                                     <ul type="list-style-type:square">
                                         <li>In-place upgrade
-                                            <pre>最简单 的 升级 方式。
-如果是复杂的系统，如 Cluster 级别的，需要达到 专业 水平，就要掌握 更全面、复杂 的 升级方法，
-否则，只要 先掌握 In-place upgrade 就可以。</pre>
+                                            <pre></pre>
                                         </li>
                                         <li>Logical Upgrade</li>
                                         <li>MySQL Cluster Upgrade</li>
@@ -1359,12 +1314,10 @@ sudo chmod 750 data</code></pre>
                                                                 <ul type="disc">
                                                                     <li>用 与 Linux 系统 相同 的 命令，因 MacOS 本质 是 Linux 系统 的 子集</li>
                                                                     <li>默认安装 情况 下， 查询 数据目录 的 详细信息 命令（包括，用户和组，以及 用户和组 的 权限）：
-                                                                        <pre><code>❯ cd /user/local/mysql
-❯ ls -l -F | grep data</code></pre>
+                                                                        <pre><code>❯ cd /user/local/mysql</code></pre>
                                                                     </li>
                                                                     <li>如果 更改 了 数据目录，则 先 进入 该目录 的 父目录，然后，运行 查询 命令：
-                                                                        <pre><code>❯ cd /Users/Data/mysql
-❯ ls -l -F | grep data</code></pre>
+                                                                        <pre><code>❯ cd /Users/Data/mysql</code></pre>
                                                                     </li>
                                                                 </ul>
                                                             </details>  

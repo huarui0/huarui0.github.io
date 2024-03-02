@@ -13,79 +13,1512 @@
     <header>
         <h1>HTML5 Example Page</h1>
     </header>
-    <details open>
-            <summary><a id="mysql-install-and-config-for-mac-note"></a>
-                <i><b>✨ MySQL Shell</b></i>
-            </summary>
-        <ul type="disc">
-            <li>
-                <details open>
-                    <summary><a id="mysql-install-note" /a> ✨ 安装</b> </i> </summary> <ul type="disc">
-            <li>
-                <details open>
-                    <summary><a id="mysql-install-note-step-by-step" />
-                        <i><b>✨ Installing MySQL Shell with Homebrew</b></i> 👈 <b>✨ 采用 本方法 安装 ✨</b>
-                    </summary>
-                    <ul type="square">
-                        <li>
-                            <details open>
-                                <summary><a id="mysql-install-note-step-by-step" />
-                                    <i><b>✨ 安装 步骤</b></i>
-                                </summary>
-                                <ol type="1">
-                                    <li>Installing Ruby using Homebrew is easy:
-                                        <pre><code>❯ brew search mysql shell</code></pre>
-                                        <pre><code>❯ brew info mysql-shell</code></pre>
-                                        <pre><code>$ brew install mysql-shell</code></pre><br>
-                                        <img width="1300" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/4560e811-5a0f-457f-8cb6-1950bed25f0f">
-                                    </li>
-                                </ol>
-                            </details>
-                        </li>
-                        <li>
-                            <details open>
-                                <summary>
-                                    <i><b>✨ 安装包 目录的位置</b></i>
-                                </summary>
-                                <ul style="disc">
-                                    <li>因为 MoOS 不同芯片或（操作）系统，Homebrew 安装目录的位置 不同，安装包的 位置，可以 用 brew info <packageName> 命令 来 查看：
-                                            <pre><code>❯ brew info mysql-shell</code></pre>
-                                    </li>
-                                </ul>
-                            </details>
-                        </li>
-                    </ul>
-                </details>
-            </li>
-            <li>
-                <details open>
-                    <summary><a id="mysql-install-on-macos-using-native-packages" />
-                        <i>✨ <a href="https://dev.mysql.com/doc/mysql-shell/8.3/en/mysql-shell-install-macos-quick.html">2.3 Installing MySQL Shell on macOS</a></i>
-                    </summary>
-                    <ul type="disc">
-                        <li>
-                            <details open>
-                                <summary><a id="mysql-install-note-step-by-step" />
-                                    <i><b>✨ 安装 步骤</b></i>
-                                </summary>
-                                <ul type="disc">
-                                    <li>Download the package from http://dev.mysql.com/downloads/shell/.</li>
-                                    <li>Double-click the downloaded DMG to mount it. Finder opens.</li>
-                                    <li>Double-click the .pkg file shown in the Finder window.
-                                    </li>
-                                    <li>Follow the steps in the installation wizard.</li>
-                                    <li>When the installer finishes, eject the DMG. (It can be deleted.)</li>
-                                </ul>
-                            </details>
-                        </li>
-                    </ul>
-                </details>
-            </li>
-        </ul>
-    </details>
-    </li>
+
+
+<details open>
+    <summary><a id="mysql-install-and-config-for-mac-note"></a>
+        <i><b>✨ MySQL</b></i>
+    </summary>
+    <ul type="disc">
+        <li>
+            <details open>
+                <summary><a id="mysql-install-and-config-for-mac-note" />
+                    <i><b>✨❗说明❗</b></i>
+                </summary>
+                <ul type="disc">
+                    <li>后续 需要 将 huarui0/MySQL_Note 目录 下 的 MacOS 部分 整合到 这个文档，<br>
+                        然后， 将 huarui0/MySQL_Note 的 MySQL_Note.md 中的 MacOS 部分链接到 这个 文档。
+                    </li>
+                    <li>需要 整合 Window 和 Linux 的 部分</li>
+                    <li>
+                        <details open>
+                            <summary><a id="explanation-for-different-ver-in-diff-position" />
+                                <i><b>✨ 关于几个 不同位置 版本 的 说明</b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>huarui0 和 squirrel-nest 两个 账号的 MySQL_Note 出现了 不一致的 情况，需要 合并 起来，另一个 fellow 就可以,两个 链接地址如下：<br>
+                                    huarui0: <a href="https://github.com/huarui0/MySQL_Note/tree/master">huarui0/MySQL_Note</a>;<br>
+                                    squirrel-nest: <a href="https://github.com/huarui0/MySQL_Note/tree/master">squirrel-nest/MySQLLearningNotes</a> -- MySQLLearningNotes 需要更名为：MySQL_Note<br>
+                                    <ol type="i">
+                                        <li>squirrel-nest 中 有 一个 01_SampleScript 文件夹， huarui0 中没有,需要将 squirrel-nest 中 的 拷到  huarui0 中</li>
+                                    </ol>
+                                </li>
+                                <li><a href="https://github.com/huarui0/MySQL_Note/blob/master/MySQL_Note.md">huarui0/MySQL_Note/MySQL_Note.md</a> - 这个版本是 包括 Window 操作系统 和 MacOS 以及 Linux 操作 系统 的 笔记，是最新整理过的，可以以这个版本为蓝本 进行 整理，然后，将 MacOS 部分，整理到这个文档，并建立链接 即可。</li>
+                                <li><a href="https://github.com/squirrel-nest/MySQLLearningNotes/blob/master/MySQLLearningNote_squirrel.md">squirrel-nest/MySQLLearningNotes/MySQLLearningNote_squirrel.md</a> - 这个版本是jinyi学习安装和设置时的笔记</li>
+                                <li><a href="https://github.com/squirrel-nest/MySQLLearningNotes/blob/master/MySQLLearningNote.md">squirrel-nest/MySQLLearningNotes/MySQLLearningNote.md</a> - 这个版本是拷贝自 huarui0/MySQL_Note/MySQL_Note.md 可以删除</li>
+                                <li><a href="https://github.com/squirrel-nest/MySQLLearningNotes/blob/master/MySQLLearningNote_huarui0.md">squirrel-nest/MySQLLearningNotes/MySQLLearningNote_huarui0.md</a> - 这个版本是拷贝自 huarui0/MySQL_Note/MySQL_Note.md 可以删除</li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        所有的笔记，都要以官网 的 原始文档 为主，因为 官网的 文档 能 保持 最新，不会 过时。 -- 要养成看原始 文档 的 习惯。
+                    </li>
+                    <li>
+                        需要的先学，不需要的暂时不用花时间学，先了解即可。（知道有这一回事，就可以）
+                    </li>
+                    <li>
+                        穿插着学（不同的知识也很要这样，比如：数据库（以 MySQL 或 PostgreSQL，选一个 作为 优先级 学习），语言（Python 或 C 或 C++ 或 Java，容易上手就可以），还有比如 游戏引擎，排好 优先级），互相印证，不同部分的 关联点。
+                    </li>
+                    <li>
+                        一定要 遵循 的 原则：学的过程用，用的过程学，知行合一，贯穿始终。 ---- 也就是 从实践到理论，再从理论到实践，实践与理论相结合的 原则。。。
+                    </li>
+                </ul>
+            </details>
+        </li>
+        <li>
+            <details open>
+                <summary><a id="mysql-reference-download-note" />
+                    ✨ MySQL Reference Manual 文档的下载</b></i>
+                </summary>
+                <ul type="disc">
+                    <li>如果网络通畅，则查看在线文档，更方便，并且，是：<br>
+                        ➡️ 👉 👉 最新版本：<a href="https://dev.mysql.com/doc/refman/8.3/en/">MySQL 8.3 Reference Manual</a>
+                    <li>
+                        <details open>
+                            <summary><a id="source-for-mysql-reference-download" />
+                                ✨ 下载 位置（网址）</b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>当前位置（网址）：<a href="https://docs.oracle.com/en-us/iaas/mysql-database/doc/supporting-documentation.html">Supporting Documentation</a>  -> <br><a href="https://dev.mysql.com/doc/refman/en/">MySQL Reference Manual</a></li>
+                                <li><a href="https://dev.mysql.com/doc/refman/en/">MySQL Documentation HomePage</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-reference-download-step-by-step" />
+                                ✨ 下载步骤</b></i>
+                            </summary>
+                            <ol type="i">
+                                <li>打开 <a href="https://dev.mysql.com/doc/">MySQL Documentation HomePage</a></li>
+                                <li>下拉到 Browse MySQL Documentation by: Product</li>
+                                <li>找到 MySQL Server & MySQL Cluster</li>
+                                <li>点击 ➕</li>
+                                <li>选择要下载的版本，点击右边的 下载 符号</li>
+                                <li>文档打开后，右键菜单，选择，另存为</li>
+                                <li>选择保存位置，即可</li>
+                            </ol>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="note-and-troubleshooting-for-mysql-reference-download" />
+                                ✨ 注意事项 及 问题处理</b></i>
+                            </summary>
+                            <ol type="i">
+                                <li>需要登陆 oracle 账号</li>
+                                <li>关闭 VPN，否则会提示无权限</li>
+                            </ol>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </li>
+        <li>
+            <details open>
+                <summary><a id="mysql-install-note" /a>
+                    ✨ 安装</b></i>
+                </summary>
+                <ul type="disc">
+                    <li>参考文档：<a href="https://dev.mysql.com/doc/refman/8.3/en/macos-installation.html">2.4 Installing MySQL on macOS</a></li>
+                    <li>安装需要关注的一般注意事项，请 参阅：<a href="https://dev.mysql.com/doc/refman/8.3/en/macos-installation-notes.html">2.4.1 General Notes on Installing MySQL on macOS</a><br>
+                        <ul>
+                            <li>可以先按照 <a href="#mysql-install-on-macos-using-native-packages">2.4.2 Installing MySQL on macOS Using Native Packages</a> 的步骤 进行 安装，后续，再 看看 注意事项</li>
+                            <li>如果要用 其它的 方式 按照，则 需要 先 看看 这个 一般性注意事项</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-install-by-brew-mode" />
+                                <i><b>✨ brew 的 安装方式</b></i> 👈 ✨ 不推荐，目前 推荐 <a href="#mysql-install-on-macos-using-native-packages">Native Packages 的 安装方式</a>，方便、快捷 ✨
+                            </summary>
+                            <ul type="disc">
+                                <li>
+                                    <details open>
+                                        <summary><a id="explanation-for-mysql-install-by-brew-mode" />
+                                            <i><b>✨ brew 安装 说明</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>brew 安装 不是 最新 版</li>
+                                            <li>因 与 mariadb 及 percona-server 同时 安装 会有 冲突
+                                                <pre><code> Conflicts with:
+mariadb (because mysql, mariadb, and percona install the same binaries)
+percona-server (because mysql, mariadb, and percona install the same binaries)</code></pre>
+                                            </li>
+                                            <li>
+                                                <details open>
+                                                    <summary><a id="mysql-install-with-brew-note" />
+                                                        <i><b>✨ brew 安装 注意事项：</b></i>
+                                                    </summary>
+                                                    <ul type="disc">
+                                                        <li>We've installed your MySQL database without a root password. To secure it run:
+                                                            <pre><code>mysql_secure_installation</code></pre>
+                                                        </li>
+                                                        <li>MySQL is configured to only allow connections from localhost by default</li>
+                                                        <li>To connect run:
+                                                            <pre><code>mysql -uroot</code></pre>
+                                                        </li>
+                                                        <li>To restart mysql after an upgrade:
+                                                            <pre><code>brew services restart mysql</code></pre>
+                                                        </li>
+                                                        <li>Or, if you don't want/need a background service you can just run:
+                                                            <pre><code>/opt/homebrew/opt/mysql/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql</code></pre>
+                                                        </li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-install-on-macos-using-native-packages" />
+                                <i>✨ 2.4.2 Installing MySQL on macOS Using Native Packages 👈 <b>✨ 采用 本方法 安装 ✨</b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>参考文档：<a href="https://dev.mysql.com/doc/refman/8.3/en/macos-installation-pkg.html">2.4.2 Installing MySQL on macOS Using Native Packages</a></li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-install-note-step-by-step" />
+                                            <i><b>✨ 安装 步骤</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>按照文档中：To install MySQL using the package installer:部分的步骤说明安装</li>
+                                            <li>步骤 1 中，作为开发、学习用，下载 社区版 即可，the community version is available <a href="https://dev.mysql.com/downloads/mysql/">here</a></li>
+                                            <li>下载 选项 如下：<br>
+                                                <img src="../../assets/8960325/09b8862c-5951-4fae-9333-a40e3ffd364f" width="60%" height="60%" style="float:left; margin: 5px;" /><br>
+                                                选择 DMG Archive(mysql-8.3.0-macos14-arm64.dmg),然后， 点击下载
+                                            </li>
+                                            <li>第三步骤时，将 `MySQL Test` 选项 选上 ✅<br>
+                                                <img src="../../assets/8960325/8050842d-19e8-4e88-b7e9-cfa3cf446046" width="60%" height="60%" style="float:left; margin: 5px;" /><br>
+                                                如果 将 `Launchd Support` 选项 选上 ✅，则可以用下面的命令 启动 MySQL Server：
+                                                <pre><code>❯ /usr/local/mysql/support-files/mysql.server start</code></pre>
+                                            </li>
+                                            <li>第四步骤，点击 安装，安装完成后：
+                                                <ul type="disc">
+                                                    <li>如果是 更新 MySQL Server，则，步骤结束（不用接下去的步骤了）<br>The installation process ends here if upgrading a current MySQL Server installation</li>
+                                                    <li>否则，是 安装 新 的 MySQL 服务器，接着 步骤 完成。<br>
+                                                        otherwise follow the wizard's additional configuration steps for your new MySQL Server installation.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <details open>
+                                                    <summary>
+                                                        <i><b>✨ `Configure MySQL Server`</b></i>
+                                                    </summary>
+                                                    <ul type="disc">
+                                                        <li>第六步骤时，选择密码加密类型 - Choose a Password Encryption Type：
+                                                            <ol type="i">
+                                                                <li>设置为：User Strong Passward Encryption 选项 选上 ✅<br>
+                                                                    <img src="../../assets/8960325/439a0282-695a-4650-ba5b-41ef9309ac8b" width="60%" height="60%" style="float:left; margin: 5px;" />
+                                                                </li>
+                                                                <li>设置密码为：`r***1*3***r` or `r***1*3 + upper(*) + **r` or `r***123`</li>
+                                                                <li>注意事项：<br>Choosing the legacy password mechanism, which is deprecated, alters the generated launchd file to set  <a href="https://dev.mysql.com/doc/refman/8.3/en/server-system-variables.html#sysvar_default_authentication_plugin">--default_authentication_plugin=mysql_native_password</a> under ProgramArguments. Choosing strong password encryption does not set --default_authentication_plugin because the default MySQL Server value is used, which is caching_sha2_password.</li>
+                                                            </ol>
+                                                        </li>
+                                                        <li>第七步骤，设置服务器的启动模式：
+                                                            <ul type="disc">
+                                                              <li>安装完成后，设置： 启动 选项 不选 ❎，即：设置为开机不启动 MySQL Server</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li>第八步骤，点击 Close，安装完成。<br>Summary is the final step and references a successful and complete MySQL Server installation. Close the wizard.</li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-install-note-step-by-step" />
+                                            <i><b>✨ 其它 的 安装 注意事项</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>
+                                                <details open>
+                                                    <summary>
+                                                        <i><b>✨ 安装目录的位置</b></i>
+                                                    </summary>
+                                                    <ul type="disc">
+                                                        <li>安装的原始目录（文件夹）的位置（路径）
+                                                            <pre><code>/usr/local/mysql-8.0.29-macos12-arm64</code></pre>
+                                                        </li>
+                                                        <li>Syncbolic link
+                                                             <pre><code>/usr/local/mysql --> /usr/local/mysql-8.0.29-macos12-arm64 -- `更改 syncblic link 的位置，即可更改 mysql 源（版本）`</code></pre>
+                                                        </li>
+                                                        <li>可以用下面的命令 更改 Syncbolic link 的 原始目录位置（路径）： -- ln 命令的 帮助：man ln 也可以：ln --help 或者 ln -help | more
+                                                             <pre><code>cd /usr/local
+ln -s mysql-8.0.30-macos12-arm64 mysql</code></pre>
+                                                             <pre><code>ln -s /usr/local/mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
+                                                        </li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li>
+                                                <details open>
+                                                    <summary>
+                                                        <i><b>✨ 目录的结构</b></i>
+                                                    </summary>
+                                                    <ul type="disc">
+                                                        <li>
+                                                            <table border="5" bordercolor="#8080cc" bordercolorlight="#8080c0" bordercolordark="#400080" bgcolor="#ffffcc">
+                                                                <caption>Table 2.6 MySQL Installation Layout on macOS</caption>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Directory</th>
+                                                                        <th>Contents of Directory</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th>Directory</th>
+                                                                        <th>Contents of Directory</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>bin</td>
+                                                                        <td>mysqld server, client and utility programs</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>data</td>
+                                                                        <td>Log files, databases, where /usr/local/mysql/data/mysqld.local.err is the default error log</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>docs</td>
+                                                                        <td>Helper documents, like the Release Notes and build information</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>include</td>
+                                                                        <td>Include (header) files</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>lib</td>
+                                                                        <td>Libraries</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>man</td>
+                                                                        <td>Unix manual pages</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>mysql-test</td>
+                                                                        <td>MySQL test suite ('MySQL Test' is disabled by default during the installation process when using the installer package (DMG))</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>share</td>
+                                                                        <td>Miscellaneous support files, including error messages, dictionary.txt, and rewriter SQL</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>support-files</td>
+                                                                        <td>Support scripts, such as mysqld_multi.server, mysql.server, and mysql-log-rotate.</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>/tmp/mysql.sock</td>
+                                                                        <td>Location of the MySQL Unix socket</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li><b>Note:</b>
+                                                <pre><code>The macOS installation process does not create nor install a sample my.cnf MySQL configuration file.</code></pre><br>
+                                                因此，如果要 通过 配置文件(called configuration files or option files) 对数据库 进行 自定义 的 设置，如：数据目录的 设置，就需要 手动 创建 my.cnf 文件（目前的做法，就是拷贝自 运行的 数据库 或 保存的 的 模版）。<br>
+                                                <ul>
+                                                    <li>关于 配置文件的 详细说明，参见 本文档中：<a href="#about-mysql-option-file">关于 配置文件(called configuration files or option files) </a> 的 说明<br>
+                                                        &nbsp;&nbsp;官方文档：<a href="https://dev.mysql.com/doc/refman/8.3/en/option-files.html">6.2.2.2 Using Option Files</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><b>Note:</b><br>
+                                                Installation on macOS using a DMG distribution, data directory initialization may be done for you automatically. -- 通过  Native Packages 安装 的 MySQL Server， 数据目录已经初始化，因此，不用 处理 <a href="#mysql-postinstallation-setup-and-testing-on-macos">2.9 Postinstallation Setup and Testing</a> 中 的 <a href="mysql-postinstallation-setup-and-testing-on-macos-init-datadir">✨ 2.9.1 Initializing the Data Directory ✨</a> 部分。
+                                            </li>
+                                            <li>查询当前 数据目录（Data Directory）位置 的 命令，参见 本文档中：<a href="#explanation-for-mysql-location-of-data-directory">Data Directory 的 位置（所在路径） 说明</a> 中 的 <a href="#query-for-mysql-location-of-data-directory">✨ 查询当前 数据目录 位置（路径） 的 命令</a>
+                                            </li>
+                                            <li><b>Note:</b><br>如果要 更改 默认 的 数据目录 位置，需要通过 配置文件 my.chf 设置。具体 参考：<a href="">更改 默认 的 数据目录 位置</a> 和 <a href="">2.9.1 Initializing the Data Directory</a>，更 详细的 说明 参见 原始 文档。</li>
+                                            <li>关于 Data Directory，更详细的信息，参见 本文档中：<a href="#about-mysql-data-directory"><i><b>✨ 关于 数据目录(called data directory)</b></i></a>，以及 官方文档： <a href="https://dev.mysql.com/doc/refman/8.3/en/data-directory.html">7.2 The MySQL Data Directory</a>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-install-on-macos-using-generic-binaries" />
+                                <i>✨ 2.2 Installing MySQL on Unix/Linux Using Generic Binaries 👈 <b>✨ 下载 tar 文件 的方式 安装 ✨</b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>参考文档：<a href="https://dev.mysql.com/doc/refman/8.3/en/binary-installation.html">2.2 Installing MySQL on Unix/Linux Using Generic Binaries</a></li>
+                                <li>文档中的 说明 很 清晰明了，以 文档中的 指南为准，进行安装</li>
+                                <li> ✘ **💥 要弄清 MacOS 的 `用户与组` 的管理「创建」 机制），此安装方法是通用的 Linux 系统的安装方式，作为一个可选选项 💥** --><br> 用户设置 参考 --> [User (Group) management](https://github.com/squirrel-nest/MacOSLearningNote/blob/master/MacOS_System_Setting.md#UserAndGroupManagement)</li>
+                                <li>下载的包存放位置 - `/Users/Softwares/Oracle/Database/MySQL/` 目录下，解压也是放在当前目录下</li>
+                                <li>也可以用 Wget 的 方法 或者 Curl 的 方法</li>
+                                <li>To install and use a MySQL binary distribution, the command sequence looks like this:<br>
+                                    <pre><code>$> groupadd mysql
+$> useradd -r -g mysql -s /bin/false mysql
+$> cd /usr/local
+$> tar xvf /path/to/mysql-VERSION-OS.tar.xz
+$> ln -s full-path-to-mysql-VERSION-OS mysql
+$> cd mysql
+$> mkdir mysql-files
+$> chown mysql:mysql mysql-files
+$> chmod 750 mysql-files
+$> bin/mysqld --initialize --user=mysql
+$> bin/mysql_ssl_rsa_setup
+$> bin/mysqld_safe --user=mysql &
+# Next command is optional
+$> cp support-files/mysql.server /etc/init.d/mysql.server</code></pre>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-install-note-by-generic-binaries-step-by-step" />
+                                            <i><b>✨ 安装 步骤</b></i>
+                                        </summary>
+                                        <ol type="1">
+                                            <li>Create a mysql User and Group
+                                                <pre><code>$> groupadd mysql
+$> useradd -r -g mysql -s /bin/false mysql</code></pre>
+                                            </li>
+                                            <li>下载安装包，作为开发、学习用，下载 社区版 即可，the community version is available <a href="https://dev.mysql.com/downloads/mysql/">here</a></li>
+                                            <li>下载方式
+                                                <ul type="disc">
+                                                    <li>下载 选项 如下：<br>
+                                                        <img src="../../assets/8960325/9bce628d-534e-4cb2-ba60-7cab57190794" width="60%" height="60%" style="float:left; margin: 5px;" /><br>
+                                                        选择 Compressed TAR Archive(mysql-8.3.0-macos14-arm64.tar.gz) or TAR(mysql-8.3.0-macos14-arm64.tar),然后， 点击下载
+                                                    </li>
+                                                    <li>用 Wget 的方法
+                                                        <pre><code>cd /Users/Softwares/Oracle/Database/MySQL/
+wget https://dev.mysql.com/get/Downloads/MySQL-8.3/mysql-8.3.0-macos14-arm64.tar.gz</code></pre>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>下载的包存放位置 - `/Users/Softwares/Oracle/Database/MySQL/` 目录下，解压也是放在当前目录下</li>
+                                            <li>解压缩
+                                                <pre><code>$> cd /Users/Softwares/Oracle/Database/MySQL/
+$> tar xvf /path/to/mysql-VERSION-OS.tar.xz</code></pre>
+                                            </li>
+                                            <li>建立 到 user/local/mysql 的 链接
+                                                <pre><code>ln -s full-path-to-mysql-VERSION-OS /usr/local/mysql</code></pre>
+                                            </li>
+                                            <li>
+                                                <details open>
+                                                  <summary>
+                                                      <i><b>可选项：设置 MYSQL_HOME 及 Path 环境变量</b></i>（Note：不同系统，设置方法有所不同；不同 Unix and Unix-Like Systems 设置文件 位置也不同的。）
+                                                  </summary>
+                                                  <ul type="disc">
+                                                      <details open>
+                                                          <summary><a id="mysql-install-with-brew-note" />
+                                                              <i><b>✨ Unix and Unix-Like Systems - 包括 MacOS System</b></i>
+                                                          </summary>
+                                                          <ul type="disc">
+                                                              <li><i><b>✨ To avoid having to type the path name of client programs always when you are working with MySQL, you can add the /usr/local/mysql/bin directory to your PATH variable:（编辑 .zshrc 文件（zsh ），bash 待补充）</b></i>
+                                                                  <pre><code>$> export MYSQL_HOME=/usr/local/mysql
+$> export PATH=$PATH:$MYSQL_HOME/bin
+#
+# or
+$> export PATH=$PATH:/usr/local/mysql/bin</code></pre>
+                                                              </li>
+                                                          </ul>
+                                                      </details>
+                                                      <details open>
+                                                          <summary><a id="mysql-install-with-brew-note" />
+                                                              <i><b>✨ Windows Systems</b></i>
+                                                          </summary>
+                                                          <ul type="disc">
+                                                              <li><i><b>✨ Test</b></i>
+                                                                  <pre><code>编辑</code></pre>
+                                                              </li>
+                                                          </ul>
+                                                      </details>
+                                                  </ul>
+                                                </details>
+                                            </li>
+                                            <li>Perform Postinstallation Setup</li>
+                                        </ol>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-install-note-step-by-step" />
+                                            <i><b>✨ 其它 的 安装 注意事项</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>
+                                                <details open>
+                                                    <summary>
+                                                        <i><b>✨ 安装目录的位置</b></i>
+                                                    </summary>
+                                                    <ul type="disc">
+                                                        <li>原始文件的位置
+                                                            <pre><code>/Users/Softwares/Oracle/Database/MySQL/</code></pre>
+                                                        </li>
+                                                        <li>Syncbolic link
+                                                             <pre><code>/usr/local/mysql --> /Users/Softwares/Oracle/Database/MySQL/mysql-8.0.29-macos12-arm64 -- `更改 syncblic link 的位置，即可更改 mysql 源（版本）`</code></pre>
+                                                        </li>
+                                                        <li>可以用下面的命令 更改 Syncbolic link 的 原始目录位置： -- ln 命令的 帮助：man ln 也可以：ln --help 或者 ln -help | more
+                                                             <pre><code>cd /Users/Softwares/Oracle/Database/MySQL/
+ln -s mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
+                                                             <pre><code>ln -s /Users/Softwares/Oracle/Database/MySQL/mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
+                                                        </li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li>
+                                                <details open>
+                                                    <summary>
+                                                        <i><b>✨ 目录的结构</b></i>
+                                                    </summary>
+                                                    <ul type="disc">
+                                                        <li>
+                                                            <table border="5" bordercolor="#8080cc" bordercolorlight="#8080c0" bordercolordark="#400080" bgcolor="#ffffcc">
+                                                                <caption>Table 2.6 MySQL Installation Layout on macOS</caption>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Directory</th>
+                                                                        <th>Contents of Directory</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th>Directory</th>
+                                                                        <th>Contents of Directory</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>bin</td>
+                                                                        <td>mysqld server, client and utility programs</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>data</td>
+                                                                        <td>Log files, databases, where /usr/local/mysql/data/mysqld.local.err is the default error log</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>docs</td>
+                                                                        <td>Helper documents, like the Release Notes and build information</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>include</td>
+                                                                        <td>Include (header) files</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>lib</td>
+                                                                        <td>Libraries</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>man</td>
+                                                                        <td>Unix manual pages</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>mysql-test</td>
+                                                                        <td>MySQL test suite ('MySQL Test' is disabled by default during the installation process when using the installer package (DMG))</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>share</td>
+                                                                        <td>Miscellaneous support files, including error messages, dictionary.txt, and rewriter SQL</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>support-files</td>
+                                                                        <td>Support scripts, such as mysqld_multi.server, mysql.server, and mysql-log-rotate.</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>/tmp/mysql.sock</td>
+                                                                        <td>Location of the MySQL Unix socket</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </li>
+        <li>
+            <details open>
+                <summary><a id="about-mysql-option-file" /a>
+                    <i><b>✨ 关于 配置文件(called configuration files or option files) </b></i>
+                </summary>
+                <ul type="disc">
+                    <li>
+                        <details open>
+                            <summary><a id="explanation-about-mysql-option-file" />
+                                <i><b>✨ 说明</b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>因为配置文件的 <span style="text-decoration: underline;"><em>重要性</em></span>，所以单独列出。</li>
+                                <li>备注：my.cnf 是用来 自定义 MySQL 配置 参数 的 文件。在 Window 系统 中 的 文件名 为：my.ini；详细信息，参阅：<a href="https://dev.mysql.com/doc/refman/8.3/en/option-files.html">6.2.2.2 Using Option Files</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-install-by-brew-mode" />
+                                <i><b>✨Option Files 的 位置 说明（所在路径）</b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>
+                                    <details open>
+                                        <summary><a id="explanation-for-mysql-install-by-brew-mode" />
+                                            <i><b>✨ 在不同的系统（Linux Like or Windows Systems）中，<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;Option Files 默认所在的位置 是不同的</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <details open>
+                                                <summary><a id="mysql-install-with-brew-note" />
+                                                    <i><b>✨ Windows Systems</b></i>
+                                                </summary>
+                                                <ul type="disc">
+                                                    <li><i><b>✨ Table 6.1 Option Files Read on Windows Systems</b></i>
+                                                        <img width="772" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/84b05b0e-0629-41a5-99f2-b8d7ba06e48c">
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                            <details open>
+                                                <summary><a id="mysql-install-with-brew-note" />
+                                                    <i><b>✨ Unix and Unix-Like Systems - 包括 MacOS System</b></i>
+                                                </summary>
+                                                <ul type="disc">
+                                                    <li><i><b>✨ Table 6.2 Option Files Read on Unix and Unix-Like Systems</b></i>
+                                                        <img width="833" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/a50857e9-ae78-4647-b450-f76bf72a0da3">
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="query-for-location-of-mysql-option-file" />
+                                            <i><b>✨ 判断 MySQL Server 是否 通过 配置文件 启动，以及 启用 哪个 配置文件 的 方法：<br>
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;--查询 当前使用的 配置文件（configuration files or option files）位置 的 命令</b></i><br>
+                                                     <i><b>To determine whether a program reads option files, invoke it with the --help option. (For mysqld, use --verbose and --help.) If the program reads option files, the help message indicates which files it looks for and which option groups it recognizes.</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>使用命令行（shell command）工具:mysqladmin 或 mysqld。➡️🔀➡️▶️ Note：详细说明，参见：<a href="">6.5.2 mysqladmin — A MySQL Server Administration Program</a>
+                                                <ol type="i">
+                                                    <li>方法 1: 使用 mysqladmin:
+                                                        <pre><code>～ ❯ cd /usr/local/mysql
+/usr/local/mysql ❯ bin/mysqladmin -u root -p variables | grep my.cnf;  # 如果 未设置，则 返回 为 空
+# 使用 列 方式
+/usr/local/mysql ❯ bin/mysqladmin -u root -p variables | grep my.cnf | awk '{print $2,$4}';  # 如果 未设置，则 返回 为 空</code></pre>
+                                                        <img alt="image" src="../../assets/8960325/d953b454-2934-42e8-832d-07893f44e563" width="60%" height="60%" style="float:left; margin: 5px;" /><br>
+                                                    </li>
+                                                    <li>方法 2:
+                                                        <pre><code>/usr/local/mysql ❯ bin/mysqld--verbose  --help |grep my.cnf;  # 如果 未设置，则 返回 为 空</code></pre>
+                                                        <img alt="image" src="../../assets/8960325/db7401b9-8bae-4b26-9a7f-94e166737c9b" width="60%" height="60%" style="float:left; margin: 5px;" />
+                                                    </li>
+                                                    <li>方法 3: -- 这个 是 可以实时 查 目前 运行 的 MySQL Server 是 用 那个 my.cnf 文件。
+                                                        <pre><code>/usr/local/mysql ❯ ps aux | grep mysql | grep 'my.cnf';   # 如果 未设置，则 返回 为 空</code></pre>
+                                                        <img alt="image" src="../../assets/8960325/cadbf05c-4e91-4a4c-ac1b-62449e9f1b36" width="60%" height="60%" style="float:left; margin: 5px;" />
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li>先连接数据库，然后，查询参数的方法。 ➡️🔀➡️▶️ Note: 连接数据库部分，参见：<a href="">登陆（连接数据库）</a>
+                                                <pre><code>mysql -u root -p   # 以本机连接为例子，输入登录密码</code></pre>
+                                                <ol type="i">
+                                                    <li>方法 1:
+                                                        <pre><code>mysql> select @@datadir; # 用 @@ 表示 全局的变量（参数）； 用 @ 表示 是 局部的变量（参数）。 具体一定查 文档 说明。</code></pre>
+                                                        <img alt="image" src="../../assets/8960325/2186510f-a258-45e6-be0b-5b33c5694121" width="60%" height="60%" style="float:left; margin: 5px;" /><br>
+                                                    </li>
+                                                    <li>方法 2:
+                                                        <pre><code>mysql> show variables like 'datadir';</code></pre>
+                                                        <img alt="image" src="../../assets/8960325/9728a61b-c587-4943-8c8d-61eb188f93b4" width="60%" height="60%" style="float:left; margin: 5px;" />
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="explanation-for-mysql-install-by-brew-mode" />
+                                            <i><b>✨ 可以用 启动 命令 指定 配置文件，而 不使用 默认 的 配置文件。</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <details open>
+                                                <summary><a id="mysql-install-with-brew-note" />
+                                                    <i><b>✨ Windows Systems</b></i>
+                                                </summary>
+                                                <ul type="disc">
+                                                    <li><i><b>✨ 指定 Option Files 的 命令</b></i>
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                            <details open>
+                                                <summary><a id="mysql-install-with-brew-note" />
+                                                    <i><b>✨ Unix and Unix-Like Systems - 包括 MacOS System</b></i>
+                                                </summary>
+                                                <ul type="disc">
+                                                    <li><i><b>✨ 指定 Option Files 的 命令</b></i>
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-install-by-brew-mode" />
+                                <i><b>✨Option Files 中 设置 的 <a href="https://dev.mysql.com/doc/refman/8.3/en/server-options.html">7.1.7 Server Command Options</a></b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>✨ 启动 MySQL Server的时候，有两种方式 设置 启动 参数 <br>
+                                    &nbsp;-- Start the mysqld server，specify program options with two methods.<br>
+                                    参阅：<a href="https://dev.mysql.com/doc/refman/8.3/en/program-options.html">Section 6.2.2, “Specifying Program Options”</a>
+                                    <ol type="1">
+                                        <li>
+                                             to provide options in an option file - 这个是最好的方式 <br>
+                                             -- The best way to ensure this is to list them in an option file.
+                                        </li>
+                                        <li>
+                                            or on the command line -- 不推荐
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="explanation-for-mysql-install-by-brew-mode" />
+                                            <i><b>✨ Option file 中 指定 program options 的 格式 和 语法 说明.</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>
+                                                mysqld reads options from the [mysqld] and [server] groups. mysqld_safe reads options from the [mysqld], [server], [mysqld_safe], and [safe_mysqld] groups. mysql.server reads options from the [mysqld] and [mysql.server] groups.
+                                                <img width="845" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/7e9a00d1-8a96-4339-acf6-ef99613f8be2">
+                                            </li>
+                                            <li>更详细 的 说明，参考：<a href="https://dev.mysql.com/doc/refman/8.3/en/option-files.html">6.2.2.2 Using Option Files</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-install-by-brew-mode" />
+                                <i><b>✨ 参考 文档</b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>官方参考文档：<a href="https://dev.mysql.com/doc/refman/8.3/en/program-options.html">6.2.2 Specifying Program Options</a> 文档中，其中的 <a href="https://dev.mysql.com/doc/refman/8.3/en/option-files.html">6.2.2.2 Using Option Files</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </li>
+        <li>
+            <details open>
+                <summary><a id="about-mysql-data-directory" /a>
+                    <i><b>✨ 关于 数据目录(called data directory)</b></i>
+                </summary>
+                <ul type="disc">
+                    <li>
+                        <details open>
+                            <summary><a id="explanation-about-mysql-option-file" />
+                                <i><b>✨ 说明 </b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>Information managed by the MySQL server is stored under a directory known as the data directory.</li>
+                                <li>官方参考文档：<a href="https://dev.mysql.com/doc/refman/8.3/en/data-directory.html">7.2 The MySQL Data Directory</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="explanation-for-mysql-location-of-data-directory" />
+                                <i><b>✨ Data Directory 的 位置（所在路径） 说明</b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-default-location-of-data-directory" />
+                                            <i><b>✨ Data Directory 默认路径</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <details open>
+                                                <summary><a id="mysql-default-location-of-data-directory-in-winsystem" />
+                                                    <i><b>✨ Windows Systems</b></i>
+                                                </summary>
+                                                <ul type="disc">
+                                                    <li>
+                                                        <i><b>✨ 默认 Data Directory 路径 都是 安装目录 的 data 目录</b></i>
+                                                            <pre><code> - </code></pre>
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                            <details open>
+                                                <summary><a id="mysql-default-location-of-data-directory-in-unix-like-system" />
+                                                    <i><b>✨ Unix and Unix-Like Systems - 包括 MacOS System</b></i>
+                                                </summary>
+                                                <ul type="disc">
+                                                    <li>
+                                                        <i><b>✨ 默认 Data Directory 路径 都是 安装目录 的 data 目录（与Windows 系统 相同）</b></i>
+                                                            <pre><code> - </code></pre>
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="query-for-mysql-cur-location-of-data-directory" />
+                                            <i><b>✨ 查询当前 数据目录 位置（路径） 的 命令：</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <details open>
+                                                <summary><a id="query-for-mysql-cur-location-of-data-directory-with-shell-command" />
+                                                    <i><b>✨ 使用命令行（shell command）工具:mysqladmin 或 mysqld。</b></i>➡️🔀➡️▶️<br>
+                                                </summary>
+                                                <ul type="disc">
+                                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Note：mysqladmin 的 说明，参见：<a href="">6.5.2 mysqladmin — A MySQL Server Administration Program</a>
+                                                    </li>
+                                                </ul>
+                                                <ol type="i">
+                                                    <li>方法 1: 使用 mysqladmin:
+                                                        <pre><code>～ ❯ cd /usr/local/mysql
+/usr/local/mysql ❯ bin/mysqladmin -u root -p variables | grep datadir;
+# 使用 列 方式
+/usr/local/mysql ❯ bin/mysqladmin -u root -p variables|grep datadir | awk '{print $2,$4}'</code></pre>
+                                                        <img alt="image" src="../../assets/8960325/2a4bef14-7c84-41b0-9b8e-6929f41a2f51" width="60%" height="60%" style="float:left; margin: 5px;" /><br>
+                                                    </li>
+                                                    <li>方法 2:
+                                                        <pre><code>/usr/local/mysql ❯ bin/mysqld --help --verbose |grep datadir;</code></pre>
+                                                        <img alt="image" src="../../assets/8960325/db7401b9-8bae-4b26-9a7f-94e166737c9b" width="60%" height="60%" style="float:left; margin: 5px;" />
+                                                    </li>
+                                                    <li>方法 3: -- 这个 是 可以实时 查 目前 运行 的 MySQL Server 是 用 那个 my.cnf 文件。
+                                                        <pre><code>/usr/local/mysql ❯ ps aux | grep mysql | grep 'datadir';</code></pre>
+                                                        <img alt="image" src="../../assets/8960325/db7401b9-8bae-4b26-9a7f-94e166737c9b" width="60%" height="60%" style="float:left; margin: 5px;" />
+                                                    </li>
+                                                </ol>
+                                            </details>
+                                            <details open>
+                                                <summary><a id="query-for-mysql-cur-location-of-data-directory-by-first-connect-database" />
+                                                    <i><b>✨ 先连接数据库，然后，查询参数的方法。</b></i>➡️🔀➡️▶️
+                                                </summary>
+                                                <ul type="disc">
+                                                    <li>&nbsp;&nbsp;&nbsp;&nbsp;Note: 连接数据库部分，参见：<a href="">登陆（连接数据库）</a> ➡️🔀➡️▶️
+                                                        <pre><code>mysql -u root -p   # 以本机连接为例子，输入登录密码</code></pre>
+                                                    </li>
+                                                </ul>
+                                                <ol type="i">
+                                                    <li>
+                                                        <details open>
+                                                            <summary><a id="query-for-mysql-cur-location-of-data-directory-by-first-connect-database-mathed1" />
+                                                                <i><b>✨ 方法 1: 用 SQL 语句 <kbd>select</kbd> 查询</b></i>
+                                                            </summary>
+                                                            <ul type="disc">
+                                                                <li>
+                                                                    <pre><code>mysql&lt; select @@datadir; # 用 @@ 表示 全局的变量（参数）； 用 @ 表示 是 局部的变量（参数）。 具体一定查 文档 说明。</code></pre>
+                                                                    <img alt="image" src="../../assets/8960325/2186510f-a258-45e6-be0b-5b33c5694121" width="60%" height="60%" style="float:left; margin: 5px;" /><br>
+                                                                </li>
+                                                            </ul>
+                                                        </details>
+                                                    </li>
+                                                    <li>
+                                                        <details open>
+                                                            <summary><a id="query-for-mysql-cur-location-of-data-directory-by-first-connect-database-mathed2" />
+                                                                <i><b>✨ 方法 2: 用 <kbd>show variables</kbd> 查询</b></i>
+                                                            </summary>
+                                                            <ul type="disc">
+                                                                <li>
+                                                                    <pre><code>mysql&lt; show variables like '%datadir%';</code></pre>
+                                                                    <img alt="image" src="../../assets/8960325/9728a61b-c587-4943-8c8d-61eb188f93b4" width="60%" height="60%" style="float:left; margin: 5px;" />
+                                                                </li>
+                                                            </ul>
+                                                        </details>
+                                                    </li>
+                                                </ol>
+                                            </details>
+                                            <details open>
+                                                <summary><a id="mysql-install-with-brew-note" />
+                                                    <i><b>✨ 如果 通过 配置文件 my.cnf 更改了 数据 目录 的 位置，则 可以 直接 查看 my.cnf 文件 中 设置 的 数据目录 的 位置</b></i>➡️🔀➡️▶️
+                                                </summary>
+                                                <ol type="i">
+                                                    <li>查询 my.cnf 文件 的 所在位置（Path）: 参见 本文档中 的 <a href="#query-for-location-of-mysql-option-file">查询 当前使用的 配置文件</a>
+                                                    </li>
+                                                    <li>查看 my.cnf 文件中 设置的 参数 值:
+                                                        <pre><code>/usr/local/mysql ❯ bin/mysqld --help --verbose | grep 'my.cnf';</code></pre>
+                                                        <img alt="image" src="../../assets/8960325/***" width="60%" height="60%" style="float:left; margin: 5px;" />
+                                                    </li>
+                                                </ol>
+                                            </details>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="explanation-for-mysql-start-by-set-datadir-directly" />
+                                            <i><b>✨ 可以用 启动 命令 直接 指定 Data Directory（包括 Base Directory），而 不通过 配置文件 设置（指定），也不使用 系统默认 的 Data Directory。</b></i><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<i><b>✨通过 命令行 工具，直接 设定 --basedir and --datadir 参数，启动 数据库 的 方式：</b></i> <br> <a href="https://github.com/squirrel-nest/MacOS_Note/blob/master/MacOS_DevEnv_Database.md#explanation-for-mysql-start-by-set-datadir-directly">关于 启动和关闭 数据库， 可 参阅 数据库 的 启动 和 关闭 部分（尚未 总结）</a>
+                                        </summary>
+                                        <ul type="disc">
+                                            <details open>
+                                                <summary><a id="mysql-install-with-brew-note" />
+                                                    <i><b>✨ Windows Systems</b></i>
+                                                </summary>
+                                                <ul type="disc">
+                                                    <li>
+                                                        <img width="1304" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/05cd974e-eadf-4519-be7b-68cc08b823e1">
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                            <details open>
+                                                <summary><a id="mysql-install-with-brew-note" />
+                                                    <i><b>✨ Unix and Unix-Like Systems - 包括 MacOS System</b></i>
+                                                </summary>
+                                                <ul type="disc">
+                                                    <li><i><b>✨ 设定 --basedir and --datadir 两个 Data Directory 参数，启动 数据库</b></i>
+                                                        <img width="1304" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/05cd974e-eadf-4519-be7b-68cc08b823e1">
+                                                    </li>
+                                                    <li>查询 MySQL 运行 情况（是否 已启动 成功）
+                                                        <img width="1311" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/a27a2832-dcf6-4659-9e4e-cf3c8840997a">
+                                                    </li>
+                                                </ul>
+                                            </details>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="relate-to-mysql-data-directory-usr-and-group" />
+                                            <i><b>✨ 数据目录 的 系统 用户权限 相关</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>
+                                                数据目录 的 权限 与 能否 成功 启动 数据库 密切 相关，因此，要正确 设置。
+                                            </li>
+                                            <li>
+                                                <details open>
+                                                    <summary><a id="query-mysql-data-directory-user-and-group" />
+                                                        <i><b>✨ 查询 当前 数据目录 的 系统 用户与组 以及 赋予 用户 的 权限</b></i>➡️🔀➡️▶️<br>
+                                                    </summary>
+                                                    <ul type="disc">
+                                                        <li>
+                                                            <details open>
+                                                                <summary><a id="query-mysql-data-directory-usr-and-group-for-unix-like-system" />
+                                                                    <i><b>✨ Unix and Unix-Like Systems</b></i>
+                                                                </summary>
+                                                                <ul type="disc">
+                                                                    <li>
+                                                                        <details open>
+                                                                            <summary><a id="query-mysql-data-directory-usr-and-group-macos" />
+                                                                                <i><b>✨ MacOS System</b></i>
+                                                                            </summary>
+                                                                            <ul type="disc">
+                                                                                <li>用 与 Linux 系统 相同 的 命令，因 MacOS 本质 是 Linux 系统 的 子集</li>
+                                                                                <li>默认安装 情况 下， 查询 数据目录 的 详细信息 命令（包括，用户和组，以及 用户和组 的 权限）：
+                                                                                    <pre><code>❯ cd /user/local/mysql
+# 也可以 直接 查 源 目录
+❯ cd /user/local/mysql-8.3.0-macos14-arm64
+❯ ls -l -F | grep data</code></pre>
+                                                                                    <img width="1309" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/0983db9e-1e52-4fec-9832-b505ef78f0de">
+                                                                                </li>
+                                                                                <li>如果 更改 了 数据目录，则 先 进入 该目录 的 父目录，然后，运行 查询 命令：
+                                                                                    <pre><code>❯ cd /Users/Data/mysql
+❯ ls -l -F | grep data</code></pre>
+                                                                                    <img width="1310" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/34b43156-a2f9-4636-9c14-80451462e79a">
+                                                                                </li>
+                                                                                </li>附：查 系统 所有 的 用户和组 的 命令：<br>
+                                                                                     &nbsp;&nbsp;&nbsp;&nbsp;(参考：<a href="https://github.com/squirrel-nest/LinuxSystemAdmin_Note/blob/master/99_MindNote/CentOS/02_CentOSAdmin/0_1_0_UserManager/%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84%E4%BF%A1%E6%81%AF.txt">squirrel-nest/LinuxSystemAdmin_Note/99_MindNote/CentOS/02_CentOSAdmin/0_1_0_UserManager/查看用户和组信息.txt</a>)
+                                                                                    <ul stlye="disc">
+                                                                                        <li>查询 用户
+                                                                                            <pre><code>cut -d: -f1 /etc/passwd</code></pre>
+                                                                                        </li>
+                                                                                        <li>查询 组
+                                                                                            <pre><code>cut -d: -f1 /etc/group</code></pre>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </details>  
+                                                                    </li>
+                                                                    <li>
+                                                                        <details open>
+                                                                            <summary><a id="query-mysql-data-directory-usr-and-group-linux" />
+                                                                                <i><b>✨ Linux System</b></i>
+                                                                            </summary>
+                                                                            <ul type="disc">
+                                                                                <li>参见：<a href="#query-mysql-data-directory-usr-and-group-macos">MacOS Systems</a> 部分，就可以了</li>
+                                                                            </ul>
+                                                                        </details>  
+                                                                    </li>
+                                                                </ul>
+                                                            </details>
+                                                            <details open>
+                                                                <summary><a id="query-mysql-data-directory-usr-and-group-windows" />
+                                                                    <i><b>✨ Windows Systems</b></i>
+                                                                </summary>
+                                                                <ul type="disc">
+                                                                    <li>
+                                                                        -
+                                                                    </li>
+                                                                </ul>
+                                                            </details>
+                                                        </li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-install-by-brew-mode" />
+                                <i><b>✨ 参考 文档</b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>官方参考文档：<a href="https://dev.mysql.com/doc/refman/8.3/en/data-directory.html">7.2 The MySQL Data Directory</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </li>
+        <li>
+            <details open>
+                <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                    <i><b>✨ 2.9 Postinstallation Setup and Testing 👈 <b> 设置 与 测试 ✨</b></i>
+                </summary>
+                <ul type="disc">
+                    <li>参考文档：<a href="https://dev.mysql.com/doc/refman/8.3/en/postinstallation.html">2.9 Postinstallation Setup and Testing</a></li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-postinstallation-setup-and-testing-on-macos-init-datadir" />
+                                <i><b>✨ 2.9.1 Initializing the Data Directory ✨</b></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                                            <b>✨ 关于 数据 目录 的 一些 说明 ✨</b>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>关于 Data Directory，更详细的信息，参见：<a href="https://dev.mysql.com/doc/refman/8.3/en/data-directory.html">7.2 The MySQL Data Directory</a><br>
+                                                Note: 本文档如果不好理解，可以先 安装 好 系统，实际 应用 后，再 回头 看，（有的时候，从 实践 到 理论，更有助于 理解）
+                                            </li>
+                                            <li>
+                                                <details open>
+                                                    <summary><a id="mysql-install-with-brew-note" />
+                                                        <i><b>✨ 安装的 方法 不同，有些 需要 手动 初始化，有些已经 自动 初始化了</b></i>
+                                                    </summary>
+                                                    <ul type="disc">
+                                                        <li>已经 自动 初始化 的 安装 模式
+                                                            <ul type="disc">
+                                                                <li>Windows installation operations performed by the MSI installer and MySQL Configurator.</li>
+                                                                <li>Installation on Linux using a server RPM or Debian distribution from Oracle.</li>
+                                                                <li>Installation using the native packaging system on many platforms, including Debian Linux, Ubuntu Linux, Gentoo Linux, and others.</li>
+                                                                <li><b><i><span style="text-decoration: underline;">Installation on macOS using a DMG distribution.</span></i></b> -- 目前（推荐）使用 的 安装 方式 --
+                                                                    <ul type="disc">
+                                                                        <li>✨ <span style="text-decoration: underline;">MacOS 系统，使用 Native Packages（DMG 安装包）的 方法 安装 的 MySQL 服务器，Data Directory 已经 初始化了</span></li>
+                                                                        <li>数据目录（Data Directory） 的 默认位置（路径）:
+                                                                            <pre><code>/usr/local/mysql/data/</code></pre>
+                                                                            Note: mysql 是 一个 链接,原始 文件夹位置为：/usr/local/mysql-8.3.0-macos14-arm64 (当前 使用 的 版本）
+                                                                        </li>
+                                                                        <li>除非 要更改 默认 的 Data Directory 位置，不用 执行 初始化 操作。</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>需要 手动 初始化 Data Directory 的 安装 模式
+                                                            <ul type="disc">
+                                                                <li>
+                                                                    采用：<a href="#mysql-install-by-brew-mode">brew 方式</a> 的 方式 安装 的 MySQL 服务器
+                                                                </li>
+                                                                <li>
+                                                                    采用：<a href="#mysql-install-on-macos-using-generic-binaries">✨ 2.2 Installing MySQL on Unix/Linux Using Generic Binaries</a> 的 方式 安装 的 MySQL 服务器
+                                                                </li>
+                                                                <li>
+                                                                    采用： Source distributions on Unix and Unix-like systems 的 方式 安装 的 MySQL 服务器
+                                                                </li>
+                                                                <li>
+                                                                    采用：installation from a ZIP Archive package on Windows 的 方式 安装 的 MySQL 服务器
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li>💥 初始化之前，Data Directory（数据目录）是不能先建立（即：不能先创建 Data Directory（数据目录）），初始化脚本会根据 `my.cnf`中设置的 数据目录（即：--datadir=/opt/mysql/mysql/data【/opt/mysql/mysql/data 是例子，需要根据自身情况创建】），自动创建 ❗ ❗</li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                                            <b>✨ 采用默认 的 Data Directory（数据目录） - （即：不更改 Data Directory（数据目录）路径）的 方式 进行 初始化： ✨</b>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>
+                                                Note: 安装 服务器 的 方式，需要 手动 初始化，采用 本办法 进行 初始化。
+                                            </li>
+                                            <li>
+                                                <details open>
+                                                    <summary><a id="mysql-install-with-brew-note" />
+                                                        <i><b>✨ 步骤 - </b></i>
+                                                    </summary>
+                                                    <ul type="disc">
+                                                        <li>
+                                                            详细信息参见：<a href="https://dev.mysql.com/doc/refman/8.3/en/data-directory-initialization.html#data-directory-initialization-server-actions">2.9.1 Initializing the Data Directory</a> 的 Data Directory Initialization Overview
+                                                        </li>
+                                                    </ul>  
+                                                    <ol type="1">
+                                                        <li>
+                                                            Change location to the top-level directory of your MySQL installation, which is typically /usr/local/mysql (adjust the path name for your system as necessary):
+                                                            <pre><code>cd /usr/local/mysql</code></pre>
+                                                        </li>
+                                                        <li>
+                                                            Create a directory whose location can be specified as the value of that variable: - The secure_file_priv system variable limits import and export operations to a specific directory.
+                                                            <pre><code>mkdir mysql-files</code></pre>
+                                                            Grant directory user and group ownership to the mysql user and mysql group, and set the directory permissions appropriately:
+                                                            <pre><code>chown mysql:mysql mysql-files
+chmod 750 mysql-files</code></pre>
+                                                        </li>
+                                                        <li>
+                                                            Use the server to initialize the data directory, including the mysql schema containing the initial MySQL grant tables that determine how users are permitted to connect to the server. For example:
+                                                            <pre><code>bin/mysqld --initialize --user=mysql</code></pre>
+                                                        </li>
+                                                        <li>
+                                                            If you want to deploy the server with automatic support for secure connections, use the mysql_ssl_rsa_setup utility to create default SSL and RSA files:
+                                                            <pre><code>bin/mysql_ssl_rsa_setup</code></pre>
+                                                            Note: The mysql_ssl_rsa_setup utility is deprecated.
+                                                        </li>
+                                                        <li>
+                                                            In the absence of any option files, the server starts with its default settings. <br>To explicitly specify options that the MySQL server should use at startup, put them in an option file such as /etc/my.cnf or /etc/mysql/my.cnf. <br>
+                                                        </li>
+                                                        <li>
+                                                            <img width="836" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/be7c6272-cb07-44e7-874c-34cbaa41d0cc" style="vertical-align: top";>
+                                                        </li>
+                                                        <li>
+                                                            <img width="818" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/a7b796d6-a396-4cd0-b7e7-2e3950ad0bd4">
+                                                        </li>
+                                                    </ol>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                                            <b>✨ 初始化时，选择 自定义 Data Directory（数据目录）的 方式 ✨</b>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>
+                                                即：初始化之前，更改默认 Data Directory（数据目录） 的 路径，然后 进行初始化，有 两种方法
+                                            </li>
+                                            <li>
+                                                <details open>
+                                                    <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                                                        <b>✨ 方法 1： 通过 配置文件(called configuration files or option files) 设置 BaseDir和DataDir 两个 参数，然后，执行初始化命令：✨</b><br>✨ 步骤 ✨ （备注：每个步骤都不能少❗❗）
+                                                    </summary>
+                                                    <ol type="1">
+                                                        <li>确认 /usr/local/mysql 链接 的 目录 是否 是 MySQL 的 最新版本
+                                                            <pre><code>❯ cd /usr/local
+❯ ls -l</code></pre>
+                                                            <img alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/ea3f7c4c-54bf-4409-a55e-f106e0d63a85" width="60%" height="60%" style="float:left; margin: 5px;" /><br>
+                                                            如果，没有链接到 最新 的 版本，执行以下 命令，建立 到 最新 版本 的 链接
+                                                            <pre><code>❯ ln -s /usr/local/mysql-8.0.30-macos12-arm64 /usr/local/mysql</code></pre>
+                                                        </li>
+                                                        <li>在 my.cnf 文档中（编辑 my.cnf），添加 或 修改 下列内容<br>Note: my.cnf 所在目录 优先采用：$MYSQL_HOME/my.cnf
+                                                            <pre><code>[mysqld]
+basedir=/usr/local/mysql
+datadir=/Users/Data/mysql/data</code></pre>
+                                                        </li>
+                                                        <li>执行初始化 命令： - Use the server to initialize the data directory, including the mysql schema containing the initial MySQL grant tables that determine how users are permitted to connect to the server.
+                                                            <ul type="disc">
+                                                                <li>💥 执行初始化之前，不能先建目录，初始化脚本会根据 `my.cnf`中设置的 数据目录，自动创建 ❗ ❗
+                                                                    <img width="840" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/7fee7e3b-b6c4-4979-9972-1ee72e026e85">
+                                                                    Create a directory if not exists ❎ - 备注：此步骤弃用 - 不能执行下面的命令
+                                                                    <pre><code>mkdir -p /Users/Data/mysql/data</code></pre>
+                                                                    Grant directory user and group ownership to the mysql user and mysql group, and set the directory permissions appropriately ❎  备注：同上，此步骤弃用
+                                                                    <pre><code>cd /Users/Data/mysql
+sudo chown _mysql:_mysql data
+sudo chmod 750 data</code></pre>
+                                                                </li>
+                                                                <li>Note: 使用 --initialize，需要重置 root 密码</li>
+                                                            </ul>
+                                                            <pre><code>❯ cd /usr/local/mysql
+❯ bin/mysqld --defaults-file=/usr/local/mysql/my.cnf --initialize --user=mysql</code></pre>
+                                                            <ul type="list-style-type:circle">
+                                                                <li>Note: 执行完 初始化 命令 后，一定 要 找到 下面 这行，并记住 密码，以便能够登陆系统，再设置新（重置）密码；<br>
+                                                                  否则，就要 <a href="">重新初始化密码</a>（👿麻烦）。！！！
+                                                                    <pre><code>2024-02-19T15:06:28.067992Z 6 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: j7&tpvo078+U</code></pre>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>设置 新密码 - After connecting, use an ALTER USER statement to assign a new root password:
+                                                            <ul type="list-style-type:circle">
+                                                                <li>启动 服务器
+                                                                    <pre><code>❯ cd /usr/local/mysql
+❯ bin/mysqld_safe --user=mysql &</code></pre>
+                                                                    或用下面的命令，启动：
+                                                                    <pre><code>❯ /usr/local/mysql/support-files/mysql.server start # 根据 数据目录 的 权限，确定 要不要 在 命令 前 加 <i>sudo</i></code></pre>
+                                                                    Note: 如果权限设置 或 方式 不对，就 无法使用 上述 命令 启动 服务器，具体 参见：<a href="">启动 和 关闭 数据库</a> 和 <a href="#relate-to-mysql-data-directory-usr-and-group">✨ 数据目录 的 系统 用户权限 相关</a>
+                                                                </li>
+                                                                <li>连接 到 服务器
+                                                                    <pre><code>❯ cd /usr/local/mysql
+❯ bin/mysql -u root -p</code></pre>
+                                                                <li>执行 重置密码 语句
+                                                                    <pre><code>ALTER USER 'root'@'localhost' IDENTIFIED BY 'root-password';</code></pre>
+                                                                    选用的密码：r**t123T**r
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ol>
+                                                    <ul type="disc">
+                                                        <li>参考：文档中的内容
+                                                            <img width="838" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/1072272f-3100-491c-850d-63bb42e8be3e">
+                                                        </li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li>方法 2： 也可以 通过 命令行 工具，直接 设定 --basedir and --datadir 两个 Data Directory 参数，进行 初始化：
+                                                <img width="839" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/eec3694c-a437-4408-96b4-62ec0f35e292">
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </li>
+        <li>
+            <details open>
+                <summary><a id="mysql-upgrade-note"></a>
+                    <i><b>✨ 升级</b></i>
+                </summary>
+                <ul type="disc">
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-postinstallation-setup-and-testing-on-macos"></a>
+                                <i><b>✨ 参考文档 ✨</b></i>
+                            </summary>
+                            <ul type="list-style-type:circle">
+                                <li>官方参考文档：<a href="https://dev.mysql.com/doc/refman/8.3/en/upgrading.html">Chapter 3 Upgrading MySQL</a>
+                                    <ul type="list-style-type:square">
+                                        <li>MacOS 系统，直接参考：<a href="https://dev.mysql.com/doc/refman/8.3/en/upgrade-binary-package.html">3.7 Upgrading MySQL Binary or Package-based Installations on Unix/Linux</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                                <i><b>✨ 说明 ✨</b></i>
+                            </summary>
+                            <ul type="list-style-type:circle">
+                                <li>针对 Binary or Package-based 安装 的 MySQL，有 三种 的 升级 方式：
+                                    <ul type="list-style-type:square">
+                                        <li>In-place upgrade
+                                            <pre>最简单 的 升级 方式。
+如果是复杂的系统，如 Cluster 级别的，需要达到 专业 水平，就要掌握 更全面、复杂 的 升级方法，
+否则，只要 先掌握 In-place upgrade 就可以。</pre>
+                                        </li>
+                                        <li>Logical Upgrade</li>
+                                        <li>MySQL Cluster Upgrade</li>
+                                    </ul>
+                                </li>
+                                <li>In-place upgrade 的 说明<br>
+                                    <ul type="list-style-type:square">
+                                        <li>In-place upgrade，实质上 就是 用 新 安装包 替换 旧 安装包，然后 再 将 新系统 的 数据目录，指向 旧系统 在用的 数据目录，然后 再更新 需要更新 的 部分。 <br>
+                                            最直接的办法就是：将 旧系统 的 配置文件（my.cnf） 直接 拷贝 到 新系统 的 $MYSQL_HOME/ 目录下（如果 有 设置 $MYSQL_HOME，则 需要 将 路径 更新 到 新系统的 路径 上。<br>
+                                            <img width="1308" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/69da16aa-2ad0-4177-9405-dac3f92bda9b">
+                                        </li>
+                                        <li>将 新系统 的 数据目录，指向 旧系统 在用的 数据目录，有两种方法：
+                                            <ul type="list-style-type:disc">
+                                                <li>方法 2: 将 旧系统 的 配置文件（my.cnf） 直接 拷贝 到 新系统 的 $MYSQL_HOME/ 目录下 -- 推荐 的 方法 ❕</li>
+                                                <li>方法 2: 直接 在 启动 命令中，指定 旧系统 的 数据 目录。<br>
+                                                    <pre><code>mysqld_safe --user=mysql --datadir=/path/to/existing-datadir &</code></pre>
+                                                    <img width="1283" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/45f61839-3dca-4ae2-b63a-7b81704b78e7">
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Logical Upgrade 的 说明<br>
+                                    <ul type="list-style-type:square">
+                                        <li>Logical Upgrade，实质上 就是 安装 一套 新系统，然后 初始化，再 将 旧系统 的 数据 导出，然后 用导入 的 方式，将 数据 导入 新系统，如果 数据量 比较大，是 一个挑战。。。 <br>
+                                            <img width="1307" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/0f14d6ac-614d-42e5-9402-7b12d0971fad">
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>MySQL Cluster Upgrade 的 说明<br>
+                                    <ul type="list-style-type:square">
+                                        <li>暂时 不用 考虑。。。
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                                <i><b>✨  ✨</b></i>
+                            </summary>
+                            <ul type="list-style-type:circle">
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                                            <b>✨  ✨</b>
+                                        </summary>
+                                        <ul type="list-style-type:disc">
+                                            <li>关于<br>
+                                                Note:
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                                            <i><b>✨ 步骤 ✨</b></i>
+                                        </summary>
+                                        <ol type="1">
+                                            <li>
+                                            </li>
+                                        </ol>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </li>
+        <li>
+            <details open>
+                <summary><a id="mysql-upgrade-note" />
+                    <i><b>✨ 管理</b></i>
+                </summary>
+                <ul type="disc">
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                                <i><b>✨ 数据库 的 用户管理 - 非 操作系统 的 用户 权限 ✨</b></i>
+                            </summary>
+                            <ul type="list-style-type:circle">
+                                <li>官方参考文档：<a href="https://dev.mysql.com/doc/refman/8.3/en/upgrading.html">Chapter 3 Upgrading MySQL</a>
+                                    <ul type="list-style-type:square">
+                                        <li>MacOS 系统，直接参考：<a href="https://dev.mysql.com/doc/refman/8.3/en/upgrade-binary-package.html">3.7 Upgrading MySQL Binary or Package-based Installations on Unix/Linux</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-data-directory-usr-and-group" />
+                                <i><b>✨ (数据库 系统 的) 启动 与 停止 ✨</b></i>
+                            </summary>
+                            <ul type="circle"><li><ul type="list-style-type:circle"><li> - </li></ul></li>
+                                <li>
+                                    <details open>
+                                        <summary><a id="query-mysql-data-directory-user-and-group" />
+                                            <i><b>✨ 数据库 系统 的 启动</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>
+                                                <details open>
+                                                    <summary><a id="query-mysql-data-directory-usr-and-group-for-unix-like-system" />
+                                                        <i><b>✨ Unix and Unix-Like Systems</b></i>
+                                                    </summary>
+                                                    <ul type="disc">
+                                                        <li>
+                                                            <details open>
+                                                                <summary><a id="query-mysql-data-directory-usr-and-group-macos" />
+                                                                    <i><b>✨ MacOS System</b></i>
+                                                                </summary>
+                                                                <ul type="disc">
+                                                                    <li>用 与 Linux 系统 相同 的 命令，因 MacOS 本质 是 Linux 系统 的 子集</li>
+                                                                    <li>默认安装 情况 下， 查询 数据目录 的 详细信息 命令（包括，用户和组，以及 用户和组 的 权限）：
+                                                                        <pre><code>❯ cd /user/local/mysql
+❯ ls -l -F | grep data</code></pre>
+                                                                    </li>
+                                                                    <li>如果 更改 了 数据目录，则 先 进入 该目录 的 父目录，然后，运行 查询 命令：
+                                                                        <pre><code>❯ cd /Users/Data/mysql
+❯ ls -l -F | grep data</code></pre>
+                                                                    </li>
+                                                                </ul>
+                                                            </details>  
+                                                        </li>
+                                                        <li>
+                                                            <details open>
+                                                                <summary><a id="query-mysql-data-directory-usr-and-group-linux" />
+                                                                    <i><b>✨ Linux System</b></i>
+                                                                </summary>
+                                                                <ul type="disc">
+                                                                    <li>参见：<a href="#query-mysql-data-directory-usr-and-group-macos">MacOS Systems</a> 部分，就可以了</li>
+                                                                </ul>
+                                                            </details>  
+                                                        </li>
+                                                    </ul>
+                                                </details>
+                                                <details open>
+                                                    <summary><a id="query-mysql-data-directory-usr-and-group-windows" />
+                                                        <i><b>✨ Windows Systems</b></i>
+                                                    </summary>
+                                                    <ul type="disc">
+                                                        <li>
+                                                            -
+                                                        </li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </li>
+        <li>
+            <details open>
+                <summary><a id="mysql-upgrade-note" />
+                    <i><b>✨ 教程 及 参考</b></i>
+                </summary>
+                <ul type="disc">
+                    <li><p style="text-indent:20em;">&nbsp;&nbsp;&nbsp;&nbsp;-- 这些教程 和 参考 总会过时，必要时，要用新的资料</p></li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                                <i><b>✨ 教程 ✨</b></i>
+                            </summary>
+                            <ul type="list-style-type:circle">
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=PzruCOcLZT8">SQL (MySQL + postgreSQL) Installation & Setup Guide for MacOS & Windows</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=kphq2TsVRIs">How to Set Up MySQL Database with Docker</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-postinstallation-setup-and-testing-on-macos" />
+                                <i><b>✨ 参考文档 ✨</b></i>
+                            </summary>
+                            <ul type="list-style-type:circle">
+                                <li><a href=""> - </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </li>
     </ul>
-    </details>
+</details>
+
+<details open>
+    <summary><a id="mysql-install-and-config-for-mac-note"></a>
+        <i><b>✨ MySQL Shell</b></i>
+    </summary>
+    <ul type="disc">
+        <li>
+            <details open>
+                <summary><a id="mysql-install-note"></a>
+                    ✨ 安装</b></i>
+                </summary>
+                <ul type="disc">
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-install-note-step-by-step" />
+                                <i><b>✨ Installing MySQL Shell with Homebrew</b></i> 👈 <b>✨ 采用 本方法 安装 ✨</b>
+                            </summary>
+                            <ul type="square">
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-install-note-step-by-step" />
+                                            <i><b>✨ 安装 步骤</b></i>
+                                        </summary>
+                                        <ol type="1">
+                                            <li>Installing Ruby using Homebrew is easy:
+                                                <pre><code>❯ brew search mysql shell</code></pre>
+                                                <pre><code>❯ brew info mysql-shell</code></pre>
+                                                <pre><code>$ brew install mysql-shell</code></pre><br>
+                                                <img width="1300" alt="image" src="https://github.com/squirrel-nest/MacOS_Note/assets/8960325/4560e811-5a0f-457f-8cb6-1950bed25f0f">
+                                            </li>
+                                        </ol>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details open>
+                                        <summary>
+                                            <i><b>✨ 安装包 目录的位置</b></i>
+                                        </summary>
+                                        <ul style="disc">
+                                            <li>因为 MoOS 不同芯片或（操作）系统，Homebrew 安装目录的位置 不同，安装包的 位置，可以 用 brew info <packageName> 命令 来 查看：
+                                                <pre><code>❯ brew info mysql-shell</code></pre>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary><a id="mysql-install-on-macos-using-native-packages" />
+                                <i>✨ <a href="https://dev.mysql.com/doc/mysql-shell/8.3/en/mysql-shell-install-macos-quick.html">2.3 Installing MySQL Shell on macOS</a></i>
+                            </summary>
+                            <ul type="disc">
+                                <li>
+                                    <details open>
+                                        <summary><a id="mysql-install-note-step-by-step" />
+                                            <i><b>✨ 安装 步骤</b></i>
+                                        </summary>
+                                        <ul type="disc">
+                                            <li>Download the package from http://dev.mysql.com/downloads/shell/.</li>
+                                            <li>Double-click the downloaded DMG to mount it. Finder opens.</li>
+                                            <li>Double-click the .pkg file shown in the Finder window.
+                                            </li>
+                                            <li>Follow the steps in the installation wizard.</li>
+                                            <li>When the installer finishes, eject the DMG. (It can be deleted.)</li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </li>
+    </ul>
+</details>
+
+
     <details open>
         <summary>Expandable title</summary>
         <p>Revealed content</p>
